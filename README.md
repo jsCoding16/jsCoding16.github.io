@@ -8,8 +8,10 @@ I specialize in building secure, reliable, and compliant **Node.js** automations
 * **Data Pipelines:** Extracting, structuring, and syncing data between databases, APIs, and spreadsheets (JSON, CSV, SQL).
 
 ## 🚀 Tech Stack
-* **Languages & Runtimes:** Node.js, JavaScript, Python
+* **Languages & Runtimes:** Node.js, PHP, JavaScript, Python
 * **Data & Storage:** SQL, NoSQL, JSON, Google Sheets API
+* **Legacy systems integration:** PHP, Laravel, WordPress APIs to modern webhooks
+* **Mobile & Cross-Platform** Kotlin, Android App Development (connecting mobile interfaces to backend APIs)
 * **Other Skills:** Webhooks, REST APIs, Automation workflows
 
 ## 📌 Featured Project

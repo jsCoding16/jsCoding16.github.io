@@ -1,0 +1,33 @@
+# SMTL File
+# Material Count: 4
+
+newmtl Duro
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+rg 0.50
+norm ../textu/Pele3_norm.jpg -rpt 4 4
+map_kd ../textu/Pele3.jpg -rpt 4 4
+
+newmtl Material2
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+rg 0.5
+map_kd ../textu/MadMed.jpg -rpt 2 2
+norm ../textu/MadMed_norm.jpg -rpt 2 2
+
+newmtl Mole
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+rg 0.50
+d 0
+norm ../textu/Pele3_norm.jpg -rpt 2 2
+map_kd ../textu/Pele3.jpg -rpt 2 2
+
+newmtl Gaveta
+Ka 1.000000 1.000000 1.000000
+Kd 0.240000 0.240000 0.240000
+Ke 0.000000 0.000000 0.000000
+rg 0.5

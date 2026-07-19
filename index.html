@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+<head>
+	<title>Joao P. - Portefólio</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <link rel="stylesheet" type="text/css" href="purecookie.css"/>
+    <script type="text/javascript" src="purecookie.js"></script>
+    <script type="text/javascript" src="Jscripts.js"></script>
+</head>
+<body onresize="reformula()" onload="getParametros();setCentro();">
+	<select id="language-selector" onchange="changeLanguage(this.value)">
+		<option value="en">English</option>
+		<option value="pt">Português</option>
+		<option value="es">Español</option>
+	</select>
+    <div class="scene" id="cena">
+        <div id="crc" class="carrocel">
+            <div id="cr1" class="carrocel-img" style="background-image:url(./imagens/img2.jpg);"><p class="texto" data-i18n="t1">...</p></div>               
+            <div id="cr2" class="carrocel-img" style="background-image:url(./imagens/img7.jpg);"><p class="texto" data-i18n="t2">...</p></div>
+            <div id="cr3" class="carrocel-img" style="background-image:url(./imagens/img4.jpg);"><p class="texto" data-i18n="t3">...</p></div>
+            <div id="cr4" class="carrocel-img" style="background-image:url(./imagens/img8.jpg);"><p class="textoP" data-i18n="t4">...</p></div>
+            <div id="cr5" class="carrocel-img" style="background-image:url(./imagens/img1.jpg);"><p class="texto" data-i18n="t5">...</p></div>
+            <div id="cr6" class="carrocel-img" style="background-image:url(./imagens/img3.jpg);"><p class="textoP" data-i18n="t6">...</p></div>
+            <div id="cr7" class="carrocel-img" style="background-image:url(./imagens/img6.jpg);"><p class="texto" data-i18n="t7">...</p></div>
+        </div>
+    </div>
+    <div id="zonaToque" onmousedown="mdown(event)" ontouchstart="tdown(event)" onmouseup="clicado=false" ontouchend="tend(event)" onmouseout="clicado=false" onmousemove="desliza(event)" ontouchmove="tdesliza(event)" ondblclick="linca()"></div>
+     <div id="s2b" style="z-index:1;position:absolute;width:100%;height:200px;">
+        <div class="scene2" id="cena2">
+            <div id="crc2" class="carrocel">
+                <div id="cr1b" class="carrocel-imgr" style="background-image:url(./imagens/img2i.jpg);"></div>
+                <div id="cr2b" class="carrocel-imgr" style="background-image:url(./imagens/img7i.jpg);"></div>
+                <div id="cr3b" class="carrocel-imgr" style="background-image:url(./imagens/img4i.jpg);"></div>
+                <div id="cr4b" class="carrocel-imgr" style="background-image:url(./imagens/img8i.jpg);"></div>
+                <div id="cr5b" class="carrocel-imgr" style="background-image:url(./imagens/img1i.jpg);"></div>
+                <div id="cr6b" class="carrocel-imgr" style="background-image:url(./imagens/img3i.jpg);"></div>
+                <div id="cr7b" class="carrocel-imgr" style="background-image:url(./imagens/img6i.jpg);"></div>
+            </div>
+        </div>
+    </div>
+    <div id="filtro" style="z-index:1;position:absolute;width:100%;height:365px;top:100px;background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,1) 90%);"></div>
+    <p id="butoes" style="z-index:10;width:100%;text-align:center;position:absolute;bottom:40px;">
+        <button class="btn" onclick="roda(-1)">
+            <image src="./imagens/anterior.png">
+        </button>
+        <button class="btn" onclick="roda(1)">
+            <image src="./imagens/seguinte.png">
+        </button>
+    </p>
+    <p id="tela"></p>
+    <div style="z-index:10;position:absolute;bottom:5px;width:100%;text-align:center;">
+        <a class="rodape" href="./politica-privacidade.html" data-i18n="pp">...</a>
+        <span style="color:#ffffff"> -  </span>
+        <a class="rodape" href="./politica-cookies.html" data-i18n="cp">...</a>
+        <span style="color:#ffffff"> - </span>
+        <a class="rodape" href="./termos-utilizacao.html" data-i18n="tu">...</a>
+        <p class="rodapecw">© 2026 Joao P. • All rights reserved</p>
+    </div>
+</body>
+</html>

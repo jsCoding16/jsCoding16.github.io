@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Recliner</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+            html, body {height: 100%;}
+			body {font-family: Arial;font-size:12px;background-color: #000;color: #fff;margin: 0px;overflow: hidden;}
+			#info {position: absolute;top: 10px;left: 20px;z-index: 100;display:block}
+            #info2 {color: #fff;position: absolute;top: 45%;width: 100%;text-align: center;z-index: 100;display:block;}
+			a { color: #fff; font-weight: bold; cursor: pointer;  text-decoration:none;margin-left:10px; }
+            #menuBtn {visibility:hidden;position:absolute;bottom:20px;right:10px;background-color: rgba(150,150,150,0.3);border: none;border-radius: 10px;width: 220px;z-index: 99;text-align:centre;padding: 1%}
+            #menuBtn2 {visibility:hidden;position:absolute;top:60px;left:10px;background-color: rgba(150,150,150,0.3);border: none;border-radius: 10px;width: 180px;z-index: 99;text-align:centre;padding: 1%}
+            .line{float:left;width:100%;}
+            .tit{width:60px; text-align:right;margin:0px;}
+            .tit1{width:100%; text-align:right;margin:0px;}
+            .tit2{width:100%; text-align:center;margin:5px;}
+            .tit3{width:100%; text-align:left;margin:5px 10px;}
+            #menu0, #menu1, #menu2, #menu3, #menu4 {font-size:7px;color: #FFFFFF;background-color: rgba(100,0,0,0.2);width: 24px;height: 14px;text-align: right;padding-top: 6px;padding-right: 2px;z-index: 99;margin:0px;float:left;}
+            .buttonE {padding-top:2px;border:none;border-radius:8px;float:left;font-size:10px;color: #FFFF00;background: rgba(0,0,0,0.5);box-shadow: 0px 0px 12px rgba(220,220,0,0.5);text-align: center;text-decoration: none;cursor: pointer;width: 54px;height:20px;}
+			.buttonE:hover {background-color: rgba(0,0,0,1);box-shadow: 0px 0px 12px rgba(220,220,0,0.95);}
+			.buttonE:active {color: #000000;background-color: rgba(220,220,0,0.75);}
+            #cc{position:absolute; top:50%;transform:translate(0,-50%);padding: 5px;padding-bottom:15px;visibility:hidden;left:25%;z-index: 97;width:50%;border-radius: 10px;background-color: rgba(0,0,0,0.25);}
+            #creditosBtn {color:#ffffff;position: absolute;bottom: 0px;left:10px;text-align: left;z-index: 99;cursor: pointer;}
+            .central{position: absolute;width:100%;z-index: 97;top: 80px;animation: hideAnim 0s ease-in 10s; animation-fill-mode:forwards;}
+            @keyframes hideAnim {to{visibility:hidden;}}
+            #escrita {margin: auto;border-radius: 10px;padding: 15px 10px; background-color: rgba(0,0,0,0.25); max-width:350px;}
+            .fechador {border:none;cursor: pointer;background-color: rgba(0,0,0,0.0);float:right;}
+            .abridor {border:none;border-radius:8px;width:120px;color:#fff;text-align:center;background-color: rgba(50,50,50,0.7); position:absolute;z-index:98;}
+            .ibtn{cursor: pointer;}
+            .rodapecw{position: absolute;bottom: 20px;left:20px;color:white;font-size:12px;font-family:Arial;margin:auto;width:100%;z-index: 99;}
+            *, *::after, *::before {-webkit-user-select: none;-webkit-user-drag: none;-webkit-app-region: no-drag;}
+            
+            #modal_overlay {display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.6);backdrop-filter: blur(4px);z-index: 999;}
+            #modal_orcamento {display: none;position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);background: rgba(30,30,30,0.9);border: 1px solid rgba(255,255,255,0.1);border-radius: 12px;padding: 20px;z-index: 1000;width: 280px;box-shadow: 0px 10px 35px rgba(0,0,0,0.8);}
+            #client_name {width: 92%;padding: 8px 10px;background: rgba(0,0,0,0.4);border: 1px solid rgba(255,255,255,0.2);color: #fff;border-radius: 6px;font-family: Arial;font-size: 12px;outline: none;}
+            #client_name:focus {border-color: rgba(220,220,0,0.5);}
+            .modal-btn {width: 100% !important;height: 32px !important;float: none !important;box-sizing: border-box;}
+			.ibtn{display:inline-block;cursor:pointer;padding:6px 12px;margin:5px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:6px;font-family:Arial,sans-serif;font-size:11px;color:#fff;transition:all 0.2s ease;}
+			.ibtn:hover{background:rgba(220,220,0,0.2);border-color:rgba(220,220,0,0.6);color:#ffff00;}
+			.ibtn:active{background:rgba(220,220,0,0.5);color:#000;}
+		</style>
+		<script src="purecookie.js"></script>
+		<script src="Jscripts.js"></script>
+	</head>
+	<body onload="changeLanguageAM(detectUserLanguage())">
+		<div id="info">
+            <a href="index.html"><image src="imagens/voltar.png"></a>
+        </div>
+        <div id="info2">Loading...</div>
+        <div class="central">
+			<p id="escrita" data-i18n="rec_intro">...</p>
+		</div>
+		<div id="Container1"></div>
+
+		<button id="ax1" class="abridor" style="top:60px;left:20px;" data-i18n="btn_rec_options">...</button>
+
+		<div id="menuBtn">
+			<button id="fx0" class="fechador"><img src="imagens/x.png" alt="Close"></button>
+			<table>
+				<tr>
+					<th data-i18n="th_controls">Controls</th>
+				</tr>
+				<tr class="line">
+					<td><p class="tit" data-i18n="lbl_head">Head</p></td>
+					<td><button id="Btn4" class="buttonE" data-i18n="btn_up">Up</button></td>
+					<td><div id="menu2">0%</div></td>
+					<td><button id="Btn5" class="buttonE" data-i18n="btn_down">Down</button></td>
+				</tr>
+				<tr class="line">
+					<td><p class="tit" data-i18n="lbl_back">Back</p></td>
+					<td><button id="Btn0" class="buttonE" data-i18n="btn_up">Up</button></td>
+					<td><div id="menu1">0°</div></td>
+					<td><button id="Btn3" class="buttonE" data-i18n="btn_down">Down</button></td>
+				</tr>
+				<tr class="line">
+					<td><p class="tit" data-i18n="lbl_rotate">Rotate</p></td>
+					<td><button id="Btn1" class="buttonE" data-i18n="btn_left">Left</button></td>
+					<td><div id="menu0">0°</div></td>
+					<td><button id="Btn2" class="buttonE" data-i18n="btn_right">Right</button></td>
+				</tr>
+				<tr class="line">
+					<td><p class="tit" data-i18n="lbl_legs">Legs</p></td>
+					<td><button id="Btn8" class="buttonE" data-i18n="btn_up">Up</button></td>
+					<td><div id="menu4">0°</div></td>
+					<td><button id="Btn9" class="buttonE" data-i18n="btn_down">Down</button></td>
+				</tr>
+				<tr class="line">
+					<td><p class="tit" data-i18n="lbl_feet">Feet</p></td>
+					<td><button id="Btn6" class="buttonE" data-i18n="btn_extend">Extend</button></td>
+					<td><div id="menu3">0%</div></td>
+					<td><button id="Btn7" class="buttonE" data-i18n="btn_retract">Retract</button></td>
+				</tr>
+				<tr class="line">
+					<td><p class="tit" data-i18n="lbl_pockets">Pockets</p></td>
+					<td colspan="3" style="width:100%;"><button id="BtOpen" style="position:relative;width:85px;float:none;left:50%;transform:translateX(-50%);" class="buttonE" data-i18n="btn_open_close">Open/Close</button></td>
+				</tr>
+				<tr class="line">
+					<td><p class="tit" data-i18n="lbl_stand">Stand</p></td>
+					<td colspan="3" style="width:100%;"><button id="BtUp" style="position:relative;width:85px;float:none;left:50%;transform:translateX(-50%);" class="buttonE" data-i18n="btn_up_down">Up/Down</button></td>
+				</tr>
+			</table>
+		</div>
+
+		<button id="ax2" class="abridor" style="bottom:40px;right:20px;" data-i18n="btn_rec_controls">...</button>
+
+		<div id="menuBtn2">
+			<button id="fx2" class="fechador"><img src="imagens/x.png" alt="Close"></button>
+			<p class="tit2" data-i18n="title_build_rec">Build your Recliner</p>
+			<div style="text-align: center;">
+                <p class="tit3" data-i18n="lbl_filling">Cushion Filling</p>
+                <!-- Substituição das imagens por spans traduzíveis com os mesmos IDs -->
+                <span class="ibtn" id="ExtraM" data-i18n="lbl_extra_soft">Extra soft</span>
+                <span class="ibtn" id="Mole" data-i18n="lbl_soft">Soft</span>
+            </div>
+			<div style="text-align: center;">
+				<p class="tit3" data-i18n="lbl_frame_wood">Frame Wood</p>
+				<img class="ibtn" id="Mescura" src="imagens/Dark.png" alt=""/>
+				<img class="ibtn" id="Mmed2" src="imagens/med2.png" alt=""/>
+				<img class="ibtn" id="Mmed" src="imagens/med.png" alt=""/>
+				<img class="ibtn" id="Mclara" src="imagens/clara.png" alt=""/>
+			</div>
+			<div style="text-align: center;">
+				<p class="tit3" data-i18n="lbl_leather">Leather</p>
+				<img class="ibtn" id="Pele4" src="imagens/pele4.png" alt=""/>
+				<img class="ibtn" id="Pele3" src="imagens/pele3.png" alt=""/>
+				<img class="ibtn" id="Pele" src="imagens/pele.png" alt=""/>
+				<img class="ibtn" id="Pele2" src="imagens/pele2.png" alt=""/>
+			</div>
+		</div>
+		
+		<div id="orcamento" style="position: absolute;top:40px;right:20px;z-index: 100;">
+			<p class="tit2" style="background-color: rgba(150,150,150,0.3);font-size:14px;" data-i18n="lbl_sel_conf">Selected Configuration:</p>
+			
+			<!-- Enchimento -->
+			<div id="wrapper_filling">
+				<p class="tit3" style="color:#777777;" data-i18n="lbl_filling">Cushion Filling</p>
+				<p class="tit1" id="opt_lbl_soft" data-i18n="lbl_soft">Soft</p>
+				<p class="tit1" id="opt_lbl_extra_soft" data-i18n="lbl_extra_soft" style="display: none;">Extra Soft</p>
+			</div>
+			
+			<!-- Madeiras -->
+			<div id="wrapper_wood">
+				<p class="tit3" style="color:#777777;" data-i18n="lbl_frame_wood">Frame Wood</p>
+				<p class="tit1" id="opt_wood_light_nordic" data-i18n="wood_light_nordic" style="display: none;">Nordic Ash</p>
+				<p class="tit1" id="opt_wood_light_natural" data-i18n="wood_light_natural">Natural Oak</p>
+				<p class="tit1" id="opt_wood_medium_warm" data-i18n="wood_medium_warm" style="display: none;">Warm Walnut</p>
+				<p class="tit1" id="opt_wood_dark_charcoal" data-i18n="wood_dark_charcoal" style="display: none;">Charcoal Oak</p>
+			</div>
+			
+			<!-- Peles -->
+			<div id="wrapper_leather">
+				<p class="tit3" style="color:#777777;" data-i18n="lbl_leather">Leather</p>
+				<p class="tit1" id="opt_leather_ivory" data-i18n="leather_ivory" style="display: none;">Soft Ivory</p>
+				<p class="tit1" id="opt_leather_cognac" data-i18n="leather_cognac" style="display: none;">Cognac Leather</p>
+				<p class="tit1" id="opt_leather_cocoa" data-i18n="leather_cocoa">Dark Cocoa</p>
+				<p class="tit1" id="opt_leather_onyx" data-i18n="leather_onyx" style="display: none;">Onyx Black</p>
+			</div>
+			
+			<button class="tit2" id="orc" data-i18n="btn_orc">...</button>
+		</div>
+		
+		<div id="modal_overlay"></div>
+        <div id="modal_orcamento">
+            <button id="close_modal" class="fechador"><img src="imagens/x.png" alt="Close"></button>
+            
+            <p class="tit2" style="font-size: 14px; font-weight: bold; margin-bottom: 20px;" data-i18n="title_choose_contact">How would you like to receive your quote?</p>
+            
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                <button id="btn_send_direct" class="buttonE modal-btn" style="background: rgba(220,220,0,0.2);" data-i18n="btn_via_direct">📩 Send Direct Request</button>
+                
+                <button id="btn_send_whatsapp" class="buttonE modal-btn" data-i18n="btn_via_whatsapp">🟢 Via WhatsApp</button>
+                <button id="btn_send_email" class="buttonE modal-btn" data-i18n="btn_via_email">✉️ Via E-mail</button>
+            </div>
+        </div>
+        
+        
+        
+        <p class="rodapecw">© 2026 Joao P. • All rights reserved</p>
+        <script src="./js/configurator-ui.js"></script>
+        <script src="./js/diru5kg9l.js"></script>
+        <script src="./wp/cdr.js"></script>
+	</body>
+</html>

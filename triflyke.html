@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Triflyke</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <style>
+        body {font-family: Arial;font-size:12px;background-color: #000;color: #fff;margin: 0px;overflow: hidden;}
+        #info {position: absolute;top: 10px;left: 20px;z-index: 100;display:block}
+        #info2 {color: #fff;position: absolute;top: 45%;width: 100%;text-align: center;z-index: 100;display:block;}
+        #menu {position: absolute; right: 5px;width:85px; top:50%;transform:translate(0,-50%);z-index: 99;cursor: arrow;}
+        .btns {cursor: pointer;}
+        #info a { color: #fff; font-weight: bold; cursor: pointer; text-decoration:none; }
+        .central{position: absolute;width:100%;z-index: 97;top: 50px;animation: hideAnim 0s ease-in 10s; animation-fill-mode:forwards;}
+        #escrita {margin: auto;border-radius: 10px;padding: 15px 10px;background-color: rgba(0,0,0,0.25); max-width:350px;}
+		.rodapecw{position: absolute;bottom: 20px;left:20px;color:white;font-size:12px;font-family:Arial;margin:auto;width:100%;z-index: 99;}            			
+		.centro{text-align:center;margin-right:5px;margin-top:0px;}
+        @keyframes hideAnim {to{visibility:hidden;}}
+        *, *::after, *::before {-webkit-user-select: none;-webkit-user-drag: none;-webkit-app-region: no-drag;}
+    </style>
+    <script src="purecookie.js"></script>
+    <script src="Jscripts.js"></script>
+</head>
+<body onload="changeLanguageAM(detectUserLanguage())">
+<div id="info"><a href="index.html"><image src="./imagens/voltar.png"></a></div>
+<div id="info2">Loading...</div>
+<div class="central">
+    <p id="escrita" data-i18n="triflyke_info">...</p>
+</div>
+<div id="Container1"></div>
+<div id="menu">
+	<image class="btns" id="Btn1" src="imagens/left.png"/>
+	<p class="centro" data-i18n="triflyke_fly">...</p>
+	<image class="btns" id="Btn2" src="imagens/right.png"/>
+	<p class="centro" data-i18n="triflyke_drive">...</p>
+</div>
+	<p class="rodapecw">© 2026 Joao P. • All rights reserved</p>        		
+	<script src="./wp/crd2.js"></script>
+</body>
+</html>

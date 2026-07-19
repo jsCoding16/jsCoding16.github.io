@@ -1,0 +1,93 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+#info {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+
+/* --- Container Centrado --- */
+.contacto-directo-container {
+    max-width: 600px;
+    margin: 150px auto 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.contacto-directo-container h1 {
+    font-size: 38px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.status-disponivel {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #00adb5;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.ponto-verde {
+    width: 8px;
+    height: 8px;
+    background-color: #39ff14;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #39ff14;
+}
+
+.con-desc {
+    color: #aaaaaa;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+/* --- Layout dos Botões --- */
+.botoes-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-link {
+    display: block;
+    padding: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: background-color 0.2s, transform 0.1s;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+}
+
+/* Cores de destaque individuais ao passar o rato */
+.btn-link.linkedin:hover {
+    background-color: #0077b5;
+    border-color: #0077b5;
+}
+
+.btn-link.github:hover {
+    background-color: #24292e;
+    border-color: #444;
+}
+
+.btn-link.email:hover {
+    background-color: #00adb5;
+    border-color: #00adb5;
+}
+
+.btn-link:active {
+    transform: scale(0.98);
+}

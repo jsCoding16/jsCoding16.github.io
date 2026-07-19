@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title data-i18n="cp_page_title">Cookies Policy</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <style>
+		body{font-family:Arial;color:white;background:hsla(0,0%,0%,1.0);}
+		span{margin-left:30px}
+		a { color: #1EE53C; font-weight: bold; cursor: pointer;  text-decoration:none; }
+		.titulo{font-size:20px;margin:5px 5px;}
+		.titulob{font-size:16px;font-weight:bold;margin:5px 15px;}
+		.texto{font-size:14px;margin:0px 20px;}
+		.textosm{font-size:14px;margin-left:20px}
+		.sm{margin-left:0px}
+		.rodapecw{text-align:center;font-size:12px;width:100%;}
+		table {width:100%;}
+		td {border:1px solid white;font-size:14px;}
+		th {border:1px solid white;font-size:14px;}
+		td:nth-child(3) {width:100px;}
+        .lang-container {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        select {
+            padding: 5px 10px;
+            font-family: Arial, sans-serif;
+            cursor: pointer;
+        }
+    </style>
+    <script src="purecookie.js"></script>
+    <script src="Jscripts.js"></script>
+</head>
+<body onload="langOnLoad()">
+
+    <!-- Seletor de Idioma Visível e Alinhado -->
+    <div class="lang-container">
+        <select id="language-selector" onchange="changeLanguage(this.value)">
+            <option value="pt">Português</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+        </select>
+    </div>
+
+    <!-- Botão Voltar -->
+    <div id="info">
+        <a href="index.html"><img src="./imagens/voltar.png" alt="Voltar"></a>
+    </div>
+    
+    <p style="font-size:26px;font-family:Arial;text-align:center;margin-top:20px;margin-bottom:0px;" data-i18n="cp_main_title">Cookies policy</p>
+    <br>
+    <br>
+	
+    <p class="titulo" data-i18n="cp_what_is">What are cookies</p>
+    <span class="textosm" data-i18n="cp_what_is_text">Cookies are small text files placed on your computer or mobile device to collect standard internet information and visitor behavior information. When you visit this website, we may collect information from you automatically through cookies or similar technology. For more information, visit </span><a href="https://allaboutcookies.org" target="_blank">www.allaboutcookies.org</a> <span class="sm" data-i18n="cp_what_is_text_con">or</span> <a href="https://youronlinechoices.eu" target="_blank">www.youronlinechoices.eu</a><span class="sm">.</span>
+    
+    <br>
+    <br>
+    
+    <p class="titulo" data-i18n="cp_how_use">How this site use cookies</p>
+    <p class="texto" data-i18n="cp_how_use_text">This site use cookies to improve your experience. The types of cookies this site use are technical and strictly necessary:</p>
+    
+    <!-- Tabela Estruturada e Unificada -->
+    <table>
+        <thead>
+            <tr>
+                <th data-i18n="cp_th_name">Name</th>
+                <th data-i18n="cp_th_purpose">Purpose</th>
+                <th data-i18n="cp_th_duration">Duration</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Categoria: Preferências -->
+            <tr>
+                <td colspan="3" style="font-weight:bold; background-color: #f9f9f9;" data-i18n="cp_table_pref">Preferences:</td>
+            </tr>
+            <tr>
+                <td><strong>purecookieDismiss</strong></td>
+                <td data-i18n="cp_pure_desc">Stores your cookie preferences (so if you accept you won’t be asked again)</td>
+                <td data-i18n="cp_pure_dur">6 months</td>
+            </tr>
+            <tr>
+                <td><strong>user-lang</strong></td>
+                <td data-i18n="cp_lang_desc">Stores the language selected by the user to apply it on your next visits.</td>
+                <td data-i18n="cp_lang_dur">1 year</td>
+            </tr>
+            <!-- Categoria: Navegação -->
+            <tr>
+                <td colspan="3" style="font-weight:bold; background-color: #f9f9f9;" data-i18n="cp_table_nav">Navigation:</td>
+            </tr>
+            <tr>
+                <td><strong>Snavid</strong></td>
+                <td data-i18n="cp_snavid_desc">Stores current page id and carousel tridimensional position.</td>
+                <td data-i18n="cp_snavid_dur">3 days</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <br>
+    <br>
+    
+    <p class="titulo" data-i18n="cp_how_manage">How to manage cookies</p>
+    <p class="texto" data-i18n="cp_how_manage_text">You can set your browser not to accept cookies. You can also delete all cookies that are already on your device on your browser settings. Each browser is different, search your browser documentation to learn the correct way to modify your cookies preferences.</p>
+    <br><br><br>
+</body>
+</html>

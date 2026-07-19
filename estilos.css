@@ -1,0 +1,47 @@
+body{margin:0;background:hsla(0,0%,0%,1.0);height:100%;overflow:hidden;}
+.scene{z-index:5;width:180px;height:108px;position:relative;margin:30% auto;perspective:600px;visibility:hidden;}
+.scene2{z-index:1;width:180px;height:108px;position:relative;margin:30% auto;perspective:600px;visibility:hidden;}
+.carrocel{width:100%;height:100%;position:absolute;transform-style:preserve-3d;transition:1s;}
+.carrocel0{width:100%;height:100%;position:absolute;transform-style:preserve-3d;transition:0s;}
+.carrocel-img{width:100%;height:100%;position:absolute;border:2px solid white;opacity:0.9; background-size:cover;}
+.carrocel-imgr{width:100%;height:100%;position:absolute;border:2px solid white;opacity:0.9; background-size:cover;}
+.carrocel-img:nth-child(1){transform: rotateY(  0deg) translateZ(220px);}
+.carrocel-img:nth-child(2){transform: rotateY( 51.4deg) translateZ(220px);}
+.carrocel-img:nth-child(3){transform: rotateY(102.8deg) translateZ(220px);}
+.carrocel-img:nth-child(4){transform: rotateY(154.2deg) translateZ(220px);}
+.carrocel-img:nth-child(5){transform: rotateY(205.6deg) translateZ(220px);}
+.carrocel-img:nth-child(6){transform: rotateY(257deg) translateZ(220px);}
+.carrocel-img:nth-child(7){transform: rotateY(308.4deg) translateZ(220px);}
+.carrocel-imgr:nth-child(1){transform: rotateY(0deg) translateZ(220px) translateY(180px);}
+.carrocel-imgr:nth-child(2){transform: rotateY(51.4deg) translateZ(220px) translateY(180px);}
+.carrocel-imgr:nth-child(3){transform: rotateY(102.8deg) translateZ(220px) translateY(180px);}
+.carrocel-imgr:nth-child(4){transform: rotateY(154.2deg) translateZ(220px) translateY(180px);}
+.carrocel-imgr:nth-child(5){transform: rotateY(205.6deg) translateZ(220px) translateY(180px);}
+.carrocel-imgr:nth-child(6){transform: rotateY(257deg) translateZ(220px) translateY(180px);}
+.carrocel-imgr:nth-child(7){transform: rotateY(308.4deg) translateZ(220px) translateY(180px);}
+@media(orientation:portrait){
+.carrocel-img:nth-child(1){transform: rotateX(  0deg) translateZ(160px);}
+.carrocel-img:nth-child(2){transform: rotateX( 51.4deg) translateZ(160px);}
+.carrocel-img:nth-child(3){transform: rotateX(102.8deg) translateZ(160px);}
+.carrocel-img:nth-child(4){transform: rotateX(154.2deg) translateZ(160px);}
+.carrocel-img:nth-child(5){transform: rotateX(205.6deg) translateZ(160px);}
+.carrocel-img:nth-child(6){transform: rotateX(257deg) translateZ(160px);}
+.carrocel-img:nth-child(7){transform: rotateX(308.4deg) translateZ(160px);}
+.carrocel-imgr:nth-child(1){transform: rotateX(  0deg) translateZ(160px);}
+.carrocel-imgr:nth-child(2){transform: rotateX( -51.4deg) translateZ(160px);}
+.carrocel-imgr:nth-child(3){transform: rotateX(-102.8deg) translateZ(160px);}
+.carrocel-imgr:nth-child(4){transform: rotateX(-154.2deg) translateZ(160px);}
+.carrocel-imgr:nth-child(5){transform: rotateX(-205.6deg) translateZ(160px);}
+.carrocel-imgr:nth-child(6){transform: rotateX(-257deg) translateZ(160px);}
+.carrocel-imgr:nth-child(7){transform: rotateX(-308.4deg) translateZ(160px);}}
+.btn{border:1.2px solid white;width:40px;height:40px;padding:3px 0px;color:white;background:hsla(0,0%,0%,0.6);border-radius:20px;margin:0px 3px;}
+.btn:focus{outline:none;}
+.chao{width:100%;height:100%;position:absolute;top:50%;}
+.texto{color:white;font-size:11px;font-family:Arial;position:relative;left:10px;top:-15px;margin:0px;padding-left:10px;background-color: rgba(0,0,0,0.7);width:140px;}
+.textoP{color:white;font-size:11px;font-family:Arial;position:relative;left:10px;top:-30px;margin:0px;padding-left:10px;background-color: rgba(0,0,0,0.7);width:140px;}
+.rodape{color:white;font-size:12px;font-family:Arial;margin:0px 3px;}
+.rodapecw{text-align:center;color:white;font-size:12px;font-family:Arial;margin:auto;width:100%;}
+#tela{color:green;position:absolute;top:0px;left:10px;}
+#zonaToque{position:absolute;z-index:9;}
+#language-selector{position:absolute;top:10px;right:20px;z-index:9;color:white;background-color: rgba(0,0,0,0.7)}
+*, *::after, *::before {-webkit-user-select: none;-webkit-user-drag: none;-webkit-app-region: no-drag;}

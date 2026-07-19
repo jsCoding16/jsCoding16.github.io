@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Robotic arm</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+             html, body {height: 100%;}
+			body {font-family: Monospace;font-size:12px;background-color: #000;color: #fff;margin: 0px;overflow: hidden;}
+			#info {position: absolute;top: 10px;left: 20px;z-index: 100;display:block}
+            #tipos {color: #FFA500;background-color: rgba(0,0,0,0.3);padding: 0px 5px;position: absolute;top: 10px;left: 50%;text-align: Left;z-index: 100;margin-left:-50px;transform:translate(-50px,0px);}
+            #info2 {color: #fff;position: absolute;top: 45%;width: 100%;text-align: center;z-index: 100;display:block;}
+			a { color: #fff; font-weight: bold; cursor: pointer;  text-decoration:none; }
+            #menuBtn {background-color: rgba(0,0,0,0.3);border: 2px solid #FFA500;border-radius: 10px;position: absolute;bottom: 50px;left: 20px;width: 187px;z-index: 99;text-align:center;padding: 1%}
+            #menu0, #menu1, #menu2, #menu3, #menu4 { font-size:9px;color: #FFA500;background-color: rgba(0,0,0,0.3);width: 60px;height: 14px;text-align: left;padding-top: 6px;padding-left: 4px;z-index: 99;margin:2px;float:left;}
+            .Cbutton {border:none;float:left;font-size:10px;color: #FFFF00;background: rgba(0,0,0,0.5);box-shadow: 0px 0px 12px rgba(220,220,0,0.5);text-align: center;text-decoration: none;cursor: pointer;width: 55px;height:20px;margin:2px;}
+			.Cbutton:hover {background-color: rgba(0,0,0,1);box-shadow: 0px 0px 12px rgba(220,220,0,0.95);}
+			.Cbutton:active {color: #000000;background-color: rgba(220,220,0,0.75);}
+            .central{position: absolute;width:100%;z-index: 97;top: 50px;animation: hideAnim 0s ease-in 20s; animation-fill-mode:forwards;}
+            #escrita {margin: auto;border-radius: 10px;padding: 15px 10px;background-color: rgba(0,0,0,0.25); max-width:350px;}
+            .rodapecw{position: absolute;bottom: 20px;left:20px;color:white;font-size:12px;font-family:Arial;margin:auto;width:100%;z-index: 99;}            			
+            @keyframes hideAnim {to{visibility:hidden;}}
+            *, *::after, *::before {-webkit-user-select: none;-webkit-user-drag: none;-webkit-app-region: no-drag;}
+		</style>
+		<script src="purecookie.js"></script>
+		<script src="Jscripts.js"></script>
+	</head>
+	<body onload="changeLanguageAM(detectUserLanguage())">
+		<div id="info"><a href="index.html"><image src="./imagens/voltar.png"></a></div>
+        <div id="tipos"></div>
+        <div id="info2">Loading...</div>
+        <div class="central">
+            <p id="escrita" data-i18n="robta_intro">...</p>
+        </div>
+        <div id="Container1"></div>
+        <div id="menuBtn">
+            <div data-i18n="robta_cmd">...</div>
+            <button class="Cbutton" id="Btn0" data-i18n="robta_back">Back</button>
+			<button class="Cbutton" id="Btn3" data-i18n="robta_front">Front</button>
+            <div id="menu1">Pos=0</div>
+            <button class="Cbutton" id="Btn1" data-i18n="robta_left">Left</button>
+            <button class="Cbutton" id="Btn2" data-i18n="robta_right">Right</button>
+            <div id="menu0">Rot=0°</div>
+            <button class="Cbutton" id="Btn4" data-i18n="robta_extend">Extend</button>
+            <button class="Cbutton" id="Btn5" data-i18n="robta_retract">Retract</button>
+            <div id="menu2">Ext=40%</div>
+            <button class="Cbutton" id="Btn6" data-i18n="robta_hrt-">Head Rt-</button>
+            <button class="Cbutton" id="Btn7" data-i18n="robta_hrt+">Head Rt+</button>
+            <div id="menu3">Ang=0°</div>
+            <button class="Cbutton" id="Btn8" data-i18n="robta_tiltF">Tilt Fwd</button>
+            <button class="Cbutton" id="Btn9" data-i18n="robta_tiltB">Tilt Bkd</button>
+            <div id="menu4">Pitch=0°</div>
+		</div>
+        <p class="rodapecw">© 2026 Joao P. • All rights reserved</p>        		
+		<script src='./wp/rbt.js'></script>
+	</body>
+</html>

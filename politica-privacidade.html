@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title data-i18n="pp_page_title">Privacy Policy</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <style>
+		body{font-family:Arial;color:white;background:hsla(0,0%,0%,1.0);}
+		span{margin-left:30px}
+		a { color: #1EE53C; font-weight: bold; cursor: pointer;  text-decoration:none; }
+		.titulo{font-size:20px;margin:5px 5px;}
+		.titulob{font-size:16px;font-weight:bold;margin:5px 15px;}
+		.texto{font-size:14px;margin:0px 20px;}
+		.textosm{font-size:14px;margin-left:20px}
+		.sm{margin-left:0px}
+		.rodapecw{text-align:center;font-size:12px;width:100%;}
+        .lang-container {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        select {
+            padding: 5px 10px;
+            font-family: Arial, sans-serif;
+            cursor: pointer;
+        }
+    </style>
+    <script src="purecookie.js" defer></script>
+    <script src="Jscripts.js" defer></script>
+</head>
+<body onload="langOnLoad()">
+
+    <!-- Seletor de Idioma Visível e Alinhado -->
+    <div class="lang-container">
+        <select id="language-selector" onchange="changeLanguage(this.value)">
+            <option value="pt">Português</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+        </select>
+    </div>
+
+    <!-- Botão Voltar (HTML Corrigido) -->
+    <div id="info">
+        <a href="index.html"><img src="./imagens/voltar.png" alt="Voltar"></a>
+    </div>
+    
+    <p style="font-size:26px;font-family:Arial;text-align:center;margin-top:20px;margin-bottom:0px;" data-i18n="pp_main_title">Privacy Policy</p>
+    <br>
+    <br>
+    
+    <p class="texto" data-i18n="pp_intro">This privacy policy explains how this website handles personal data, even though no such data is collected during your visit.</p>
+	<br>
+    <br>
+    
+    <p class="titulo" data-i18n="pp_what_data">What data is collected</p>
+    <span class="textosm" data-i18n="pp_what_data_text">This website <strong>does not</strong> collect any kind of personal data from you. However, this website uses cookies to manage navigation and user preferences. You can check our cookie policy </span><a href="./cp.html"><span class="sm" data-i18n="pp_what_data_text_link">here</span></a>.
+    
+    <br>
+    <br>
+    
+    <p class="titulo" data-i18n="pp_how_used">How your data will be used</p>
+    <p class="texto" data-i18n="pp_how_used_text">Your personal data will not be processed or used because this website does not collect any personal data from its visitors.</p>
+    
+    <br>
+    <br>
+    
+    <p class="titulo" data-i18n="pp_rights_title">Your data protection rights under GDPR</p>
+    <p class="texto" data-i18n="pp_rights_text">
+        Under the General Data Protection Regulation (GDPR), individuals have specific rights regarding their personal data. Although this website does not collect or store your data, you generally hold the following rights:
+        <br><br>
+        <p class="titulob" data-i18n="pp_r1_t">Right of access & rectification:</p> <span data-i18n="pp_r1_d">You can request information about stored data and correct any inaccuracies.</span><br>
+        <p class="titulob" data-i18n="pp_r2_t">Right to erasure (To be forgotten):</p> <span data-i18n="pp_r2_d">You can request the deletion of your personal data under certain conditions.</span><br>
+        <p class="titulob" data-i18n="pp_r3_t">Right to restrict or object to processing:</p> <span data-i18n="pp_r3_d">You have the right to limit or object to how your data is handled.</span><br>
+        <p class="titulob" data-i18n="pp_r4_t">Right to data portability:</p> <span data-i18n="pp_r4_d">You can request the transfer of your data to another organization or directly to you.</span><br>
+        <p class="titulob" data-i18n="pp_r5_t">Right to lodge a complaint:</p> <span data-i18n="pp_r5_d">You have the right to complain to a data protection supervisory authority (such as CNPD in Portugal).</span>
+        <br><br>
+        <span data-i18n="pp_contact_text">If you have any questions about this privacy policy, feel free to contact us via email at</span> <a href="mailto:jscoding.contact@gmail.com">jscoding.contact@gmail.com</a>.
+    </p>
+    
+    <br><br><br>
+</body>
+</html>

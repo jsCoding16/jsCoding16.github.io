@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto / Contact - jsCoding</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <link rel="stylesheet" type="text/css" href="estiloscontacto.css">
+    <script src="purecookie.js"></script>
+    <script src="Jscripts.js"></script>
+</head>
+<body onload="changeLanguageAM(detectUserLanguage())">
+    <div id="info">
+        <a href="index.html">
+            <img src="./imagens/voltar.png" alt="Voltar" class="btn-voltar">
+        </a>
+    </div>
+
+    <div class="contacto-directo-container">
+        <h1 data-i18n="con_title">Vamos conversar?</h1>
+        
+        <p class="status-disponivel">
+            <span class="ponto-verde"></span> 
+            <span data-i18n="con_status">Disponível para novos projetos</span>
+        </p>
+        
+        <p class="con-desc" data-i18n="con_desc_no_form">
+            Para garantir a máxima proteção de dados e privacidade, este site não recolhe informações pessoais. Se tem uma proposta ou quer discutir um projeto, por favor contacte-me através de uma das plataformas oficiais abaixo:
+        </p>
+
+        <div class="botoes-contacto">
+            <a href="https://www.linkedin.com/in/joao-p-creative" target="_blank" rel="noopener noreferrer" class="btn-link linkedin">
+                <span>LinkedIn</span>
+            </a>
+
+            <a href="https://github.com/jsCoding16" target="_blank" rel="noopener" class="btn-link github">
+                <span>GitHub</span>
+            </a>
+            
+            <a href="mailto:jscoding.contact@gmail.com" class="btn-link email">
+                <span data-i18n="con_btn_email">Enviar Email</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

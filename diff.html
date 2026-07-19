@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Differential</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+            html, body {height: 100%;}
+			body {font-family: Monospace;background-color: #000;color: #fff;margin: 0px;overflow: hidden;}
+			#info {position: absolute;top: 10px;left: 20px;z-index: 100;display:block}
+            #info2 {color: #fff;position: absolute;top: 45%;width: 100%;text-align: center;z-index: 100;display:block;}
+			a { color: #fff; font-weight: bold; cursor: pointer; text-decoration:none; }
+            #menu {position: absolute;bottom:30px;left:50%;width:340px;transform:translate(-50%,0);text-align:center;z-index:99;}
+            .btns {cursor: pointer;}
+            button { outline:none; color: #fff;border: 0px;padding: 5px 10px;margin:10px 16px;border-radius: 10px;cursor: pointer; background-color:rgba(0,0,0,0.25)}
+			button:hover {opacity:1;box-shadow: 0px 0px 12px rgba(255,255,255,0.75);}
+            .central{position: absolute;width:100%;z-index: 97;top: 50px;animation: hideAnim 0s ease-in 10s; animation-fill-mode:forwards;}
+            .st{position: absolute;left:50%;transform:translate(-50%,0);}
+            #escrita {margin: auto;border-radius: 10px;padding: 15px 10px;background-color: rgba(0,0,0,0.25); max-width:350px;}
+            .ccImg{margin-bottom:-4px;margin-right:10px;}
+            @keyframes hideAnim {to{visibility:hidden;}}
+            .rodapecw{position: absolute;bottom: 20px;left:20px;color:white;font-size:12px;font-family:Arial;margin:auto;width:100%;z-index: 99;}           
+            *, *::after, *::before {-webkit-user-select: none;-webkit-user-drag: none;-webkit-app-region: no-drag;}
+		</style>
+		<script src="purecookie.js"></script>
+		<script src="Jscripts.js"></script>
+	</head>
+	<body onload="changeLanguageAM(detectUserLanguage())">
+		<div id="info"><a href="index.html"><image src="./imagens/voltar.png"></a></div>
+        <div id="info2">Loading...</div>
+        <div class="central">
+    <p id="escrita" data-i18n="diff_desc">Mechanical differential model. The user can decrease the rotational speed on one side of the output shafts to see the planetary gears working.</p>
+</div>
+<div id="Container1"></div>
+<div id="menu">
+    <button id="btnT" data-i18n="btn_transparent">...</button>
+    <div>
+        <span data-i18n="lbl_brake">...</span>
+	</div>
+	<button id="Btn1" style="width:100px;" data-i18n="btn_left">...</button>
+	<img id="empty" src="imagens/empty.png" alt="">
+	<img id="seta" class="st" src="imagens/seta.png" alt="">
+	<img id="setaB" class="st" src="imagens/setaBase.png" alt="">
+	<button id="Btn2" style="width:100px;" data-i18n="btn_right">...</button>
+</div>
+
+        <p class="rodapecw">© 2026 Joao P. • All rights reserved</p>        
+		<script src='./wp/dif.js'></script>
+	</body>
+</html>

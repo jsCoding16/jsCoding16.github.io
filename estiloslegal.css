@@ -1,0 +1,87 @@
+body{font-family:Arial;color:white;background:hsla(0,0%,0%,1.0);}
+table {width:100%;}
+td {border:1px solid white;font-size:14px;}
+th {border:1px solid white;font-size:14px;}
+td:nth-child(3) {width:100px;}
+ul { list-style-type: disc;}
+a { color: #1EE53C; font-weight: bold; cursor: pointer;  text-decoration:none; }
+.titulo{font-size:20px;margin:5px 5px;}
+.titulob{font-size:14px;font-weight:bold;margin:0px 5px;}
+.texto{font-size:14px;margin:0px 20px;}
+.rodapecw{text-align:center;font-size:12px;width:100%;}
+.titulo-pagina {
+    text-align: center;
+    font-size: 28px;
+    margin: 80px 20px 40px 20px;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.legal-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px 20px;
+    display: grid;
+    /* Divide em 3 colunas iguais em ecrãs grandes */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+.legal-section {
+    background-color: #1e1e1e; /* Fundo ligeiramente mais claro que o body para criar contraste */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.idioma-header {
+    text-align: center;
+    font-size: 20px;
+    color: #00adb5; /* Uma cor de destaque moderna (podes mudar para a cor do teu site) */
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #333;
+}
+.divisor {
+    display: none; /* Esconde a linha no modo de 3 colunas */
+}
+#info {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+*, *::after, *::before {-webkit-user-select: none;-webkit-user-drag: none;-webkit-app-region: no-drag;}
+
+/* Em Tablets (até 1024px de largura) -> Passa para 1 coluna */
+@media (max-width: 1024px) {
+    .legal-container {
+        grid-template-columns: 1fr; /* Transforma as 3 colunas em apenas 1 */
+        gap: 20px;
+        max-width: 700px; /* Estreita o texto para não ficar demasiado largo e difícil de ler */
+    }
+    
+    .divisor {
+        display: block; /* Mostra a linha para separar visualmente os idiomas */
+        border: 0;
+        height: 1px;
+        background-color: #333;
+        margin: 20px 0;
+    }
+}
+
+/* Em Telemóveis Pequenos (até 480px) */
+@media (max-width: 480px) {
+    .titulo-pagina {
+        font-size: 20px;
+        margin-top: 70px;
+    }
+    
+    .legal-section {
+        padding: 20px;
+    }
+    
+    .idioma-header {
+        font-size: 18px;
+    }
+}

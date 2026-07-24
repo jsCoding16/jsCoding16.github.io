@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em Construção / Under Construction / En Construcción</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid #334155;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(8px);
+        }
+
+        .icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: #38bdf8;
+            font-weight: 600;
+        }
+
+        .messages {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .lang-block {
+            border-bottom: 1px solid #334155;
+            padding-bottom: 15px;
+        }
+
+        .lang-block:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .lang-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #94a3b8;
+            margin-bottom: 4px;
+        }
+
+        .lang-text {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            color: #e2e8f0;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="icon">🚧</div>
+        <h1>Página em Atualização</h1>
+
+        <div class="messages">
+            <!-- Português -->
+            <div class="lang-block">
+                <div class="lang-title">Português</div>
+                <div class="lang-text">Este site está atualmente em construção. Voltaremos em breve com novidades!</div>
+            </div>
+
+            <!-- Inglês -->
+            <div class="lang-block">
+                <div class="lang-title">English</div>
+                <div class="lang-text">This website is currently under construction. We will be back online shortly!</div>
+            </div>
+
+            <!-- Espanhol -->
+            <div class="lang-block">
+                <div class="lang-title">Español</div>
+                <div class="lang-text">Este sitio web se encuentra actualmente en construcción. ¡Volveremos muy pronto!</div>
+            </div>
+        </div>
+
+        <footer>
+            &copy; Todos os direitos reservados / All rights reserved
+        </footer>
+    </div>
+
+</body>
+</html>

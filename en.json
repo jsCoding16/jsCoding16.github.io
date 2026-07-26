@@ -134,7 +134,8 @@
   "btn_via_direct": "📩 Send Direct Request",
   "msg_success": "Thank you! Your quote request has been sent.",
   "msg_error": "Oops! There was a problem submitting your request.",
-  "title_choose_contact": "How would you like to receive your quote?"
-  
+  "title_choose_contact": "How would you like to receive your quote?",
+
+  "cred": "Credits"
 }
 

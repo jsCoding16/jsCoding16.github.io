@@ -134,6 +134,7 @@
   "btn_via_direct": "📩 Enviar Solicitud Directa",
   "msg_success": "¡Gracias! Su solicitud de presupuesto ha sido enviada.",
   "msg_error": "¡Ups! Hubo un problema al enviar su solicitud.",
-  "title_choose_contact": "¿Cómo prefiere recibir su presupuesto?"
+  "title_choose_contact": "¿Cómo prefiere recibir su presupuesto?",
 
+  "cred": "Créditos"
 }

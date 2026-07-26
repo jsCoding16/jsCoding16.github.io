@@ -60,7 +60,7 @@ function eraseCookie(name) {
 }
 function cookieConsent() {
   if (!getCookie('purecookieDismiss')) {
-    var bannerHTML = '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><a>' + purecookieTitle + '</a></div><div class="cookieDesc"><p>' + purecookieDesc + purecookieLink + '</p></div><div class="cookieButton"><a onClick="purecookieDismiss();">' + purecookieButtonYes + '</a><a onClick="purecookieRefuse()">' + purecookieButtonNo + '</a></div></div>';
+    var bannerHTML = '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><a>' + purecookieTitle + '</a></div><div class="cookieDesc"><p id="ckDesc">' + purecookieDesc + purecookieLink + '</p></div><div class="cookieButton"><a  id="ckBtnYes" onClick="purecookieDismiss();">' + purecookieButtonYes + '</a><a id="ckBtnNo" onClick="purecookieRefuse()">' + purecookieButtonNo + '</a></div></div>';
     
     // Insere o banner de forma limpa mesmo antes do fim do body
     document.body.insertAdjacentHTML('beforeend', bannerHTML);

@@ -224,6 +224,7 @@ async function changeLanguage(lang) {
 	// Guarda a preferência no cookie por 365 dias
 	setCookie('user-lang', lang, 365);
 	document.documentElement.lang = lang; // Atualiza o atributo lang do HTML
+	atualizarTextoPureCookie()
   } catch (error) {
     console.error("Erro ao carregar as traduções:", error);
   }
@@ -309,5 +310,22 @@ async function atualizarTextoBotao(elemento) {
 		}
 	} catch (error) {
 		console.error("Erro ao atualizar o texto do botão:", error);
+	}
+};
+
+async function atualizarTextoPureCookie() {
+	try {
+		const lang = detectUserLanguage();
+		// Deteta os textos certos do Cookie e inicia o purecookie.js
+		const texts = cookieTranslations[lang] || cookieTranslations['pt'];
+		const elemento = document.getElementById('cookieConsentContainer');
+		  if (elemento) {
+			//initPureCookie(texts.desc,texts.link, texts.btny, texts.btnn);
+			document.getElementById('ckDesc').innerHTML = texts.desc + texts.link;
+			document.getElementById('ckBtnYes').innerHTML = texts.btny;
+			document.getElementById('ckBtnNo').innerHTML = texts.btnn;
+		  }
+	} catch (error) {
+		console.error("Erro ao atualizar o texto do PureCookie:", error);
 	}
 };

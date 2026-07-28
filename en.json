@@ -1,4 +1,5 @@
 {
+  
   "t1": "Concept & features",
   "t2": "Motion & design",
   "t3": "Mechanical & educational",
@@ -58,6 +59,7 @@
   "triflyke_info": "Interactive concept vehicle. The user can switch between the two vehicle modes and explore them from different angles, integrated into an artistic architectural background.",
   "triflyke_fly": "Fly",
   "triflyke_drive": "Drive",
+  "lbl_tri_color": "Colors:",
   
   "trifloho_info": "Explore this floating tiny house and see the fish through the lower deck bedroom window.",
   "trifloho_seeAll": "See all",
@@ -131,7 +133,9 @@
   "btn_orc": "To ask for a quote",
   
   "ph_your_email": "Your email",
-  "btn_via_direct": "📩 Send Direct Request",
+  "btn_via_direct": "📩 Direct Request",
+  "btn_via_whatsapp": "🟢 WhatsApp",
+  "btn_via_email": "✉️ E-mail",
   "msg_success": "Thank you! Your quote request has been sent.",
   "msg_error": "Oops! There was a problem submitting your request.",
   "title_choose_contact": "How would you like to receive your quote?",

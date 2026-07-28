@@ -1,4 +1,5 @@
 {
+  
   "t1": "Concepto y funciones",
   "t2": "Movimiento y diseño",
   "t3": "Mecánica y educativo",
@@ -58,6 +59,7 @@
   "triflyke_info": "Vehículo conceptual interactivo. El usuario puede cambiar entre los dos modos del vehículo y explorarlos desde diferentes ángulos, integrados en un fondo de arquitectura artística.",
   "triflyke_fly": "Volar",
   "triflyke_drive": "Conducir",
+  "lbl_tri_color": "Colores:",
 
   "trifloho_info": "Explore esta minicasa flotante y vea los peces a través de la ventana del dormitorio en la cubierta inferior.",
   "trifloho_seeAll": "Ver todo",
@@ -131,7 +133,9 @@
   "btn_orc": "Pedir un presupuesto",
   
   "ph_your_email": "Su correo electrónico",
-  "btn_via_direct": "📩 Enviar Solicitud Directa",
+  "btn_via_direct": "📩 Solicitud Directa",
+  "btn_via_whatsapp": "🟢 WhatsApp",
+  "btn_via_email": "✉️ E-mail",
   "msg_success": "¡Gracias! Su solicitud de presupuesto ha sido enviada.",
   "msg_error": "¡Ups! Hubo un problema al enviar su solicitud.",
   "title_choose_contact": "¿Cómo prefiere recibir su presupuesto?",

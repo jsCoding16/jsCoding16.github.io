@@ -33,8 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const btnOrcamento = document.getElementById("orc");
     const modal = document.getElementById("modal_orcamento");
+    const modal_sucesso = document.getElementById("modal_sucesso");
     const overlay = document.getElementById("modal_overlay");
     const btnClose = document.getElementById("close_modal");
+    const btnClose_sucesso = document.getElementById("close_modal_sucesso");
 
     // === Função Genérica para Atualizar a Visibilidade ===
     function updateSelection(categoryKey, clickedButtonId) {
@@ -105,14 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     
-    
-    
-    
-    
-    
-    
-    // CONFIGURAÇÃO FORMSPREE: Deixa ativo se quiseres testar o e-mail de demo
-    const formspreeID = "OS_TEUS_NUMEROS_AQUI"; 
 
     // Abrir o modal
     if (btnOrcamento) {
@@ -127,93 +121,37 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.style.display = "none";
         overlay.style.display = "none";
     };
+    const closeModal_sucesso = () => {
+        modal_sucesso.style.display = "none";
+        overlay.style.display = "none";
+    };
+    
+    
     if (btnClose) btnClose.addEventListener("click", closeModal);
+    if (btnClose_sucesso) btnClose_sucesso.addEventListener("click", closeModal_sucesso);
     if (overlay) overlay.addEventListener("click", closeModal);
 
-    // Função para obter a configuração ativa
-    function getActiveConfiguration() {
-        const activeFilling = document.querySelector("#wrapper_filling p.tit1:not([style*='none'])")?.innerText || "Default";
-        const activeWood = document.querySelector("#wrapper_wood p.tit1:not([style*='none'])")?.innerText || "Default";
-        const activeLeather = document.querySelector("#wrapper_leather p.tit1:not([style*='none'])")?.innerText || "Default";
-        
-        return { activeFilling, activeWood, activeLeather };
-    }
-
+    
     // 📩 OPÇÃO 1: Envio Direto (Anónimo de Teste)
     document.getElementById("btn_send_direct")?.addEventListener("click", async () => {
-        const { activeFilling, activeWood, activeLeather } = getActiveConfiguration();
-
-        // Dados a enviar (apenas a configuração técnica da poltrona)
-        const formData = {
-            Mensagem: "Pedido de Demonstração (Sem Dados do Cliente)",
-            Enchimento: activeFilling,
-            Madeira: activeWood,
-            Pele: activeLeather
-        };
-
-        const btnDirect = document.getElementById("btn_send_direct");
-        const originalText = btnDirect.innerText;
-        btnDirect.innerText = "..."; 
-        btnDirect.disabled = true;
-
-        try {
-            // Se não tiveres o FormspreeID configurado, simulamos apenas o sucesso após 1 segundo
-            if (formspreeID === "OS_TEUS_NUMEROS_AQUI") {
-                await new Promise(resolve => setTimeout(resolve, 1000)); // Simula rede
-                alert("Simulação de Envio bem-sucedida! (Nenhum dado pessoal foi recolhido).");
-                closeModal();
-                return;
-            }
-
-            const response = await fetch(`https://formspree.io/f/${formspreeID}`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData)
-            });
-
-            if (response.ok) {
-                alert("Pedido enviado! Receberá a configuração de teste no e-mail registado no Formspree.");
-                closeModal();
-            } else {
-                throw new Error();
-            }
-        } catch (error) {
-            alert("Erro na simulação. Tente novamente.");
-        } finally {
-            btnDirect.innerText = originalText;
-            btnDirect.disabled = false;
-        }
+		closeModal();
+		modal_sucesso.style.display = "block";
+        overlay.style.display = "block";
+        
     });
 
     // 🟢 OPÇÃO 2: WhatsApp (Abre com texto pré-definido anónimo)
     document.getElementById("btn_send_whatsapp")?.addEventListener("click", () => {
-        const { activeFilling, activeWood, activeLeather } = getActiveConfiguration();
-        const numTelefone = "351912345678"; 
-        
-        const texto = `Olá! Estou a testar o vosso configurador de demonstração e escolhi esta combinação:\n\n` +
-                      `- Enchimento: ${activeFilling}\n` +
-                      `- Madeira: ${activeWood}\n` +
-                      `- Pele: ${activeLeather}`;
-
-        window.open(`https://wa.me/${numTelefone}?text=${encodeURIComponent(texto)}`, '_blank');
         closeModal();
+		modal_sucesso.style.display = "block";
+        overlay.style.display = "block";
     });
 
     // ✉️ OPÇÃO 3: E-mail (Abre e-mail com texto pré-definido anónimo)
     document.getElementById("btn_send_email")?.addEventListener("click", () => {
-        const { activeFilling, activeWood, activeLeather } = getActiveConfiguration();
-        const emailVendedor = "vendas@omeusite.com"; 
-        
-        const assunto = "Demo - Configuração Selecionada do Recliner";
-        const corpo = `Olá!\n\n` +
-                      `Esta é uma mensagem gerada na demonstração do vosso configurador com as opções:\n\n` +
-                      `- Enchimento: ${activeFilling}\n` +
-                      `- Estrutura de Madeira: ${activeWood}\n` +
-                      `- Tipo de Pele: ${activeLeather}\n\n` +
-                      `Envio de teste.`;
-
-        window.location.href = `mailto:${emailVendedor}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
         closeModal();
+		modal_sucesso.style.display = "block";
+        overlay.style.display = "block";
     });
     
 });

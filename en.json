@@ -67,6 +67,10 @@
   "trifloho_mainDeck": "Main deck",
   "trifloho_lowerDeck": "Lower deck",
   "trifloho_glassDoors": "Glass doors",
+  "trifloho_sel1": "Hull & carpet color",
+  "trifloho_sel2": "Deck floor tone",
+  "trifloho_sel3": "Wood color",
+  "trifloho_sel4": "Glass tint",
   
   "diff_desc": "Mechanical differential model. The user can decrease the rotational speed on one side of the output shafts to see the planetary gears working.",
   "btn_transparent": "Transparent",

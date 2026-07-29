@@ -67,6 +67,10 @@
   "trifloho_mainDeck": "Cubierta principal",
   "trifloho_lowerDeck": "Cubierta inferior",
   "trifloho_glassDoors": "Puertas de cristal",
+  "trifloho_sel1": "Color del casco y moqueta",
+  "trifloho_sel2": "Tono del suelo de la cubierta",
+  "trifloho_sel3": "Color de la madera",
+  "trifloho_sel4": "Tono de los cristales",
   
   "diff_desc": "Modelo de diferencial mecánico. El usuario puede disminuir la velocidad de rotación en uno de los lados de los ejes de transmisión para ver los engranajes planetarios en funcionamiento.",
   "btn_transparent": "Transparente",

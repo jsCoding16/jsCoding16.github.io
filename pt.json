@@ -67,6 +67,10 @@
   "trifloho_mainDeck": "Deck principal",
   "trifloho_lowerDeck": "Deck inferior",
   "trifloho_glassDoors": "Portas de vidro",
+  "trifloho_sel1": "Cor do casco e do carpete",
+  "trifloho_sel2": "Tom do piso do convés",
+  "trifloho_sel3": "Cor da madeira",
+  "trifloho_sel4": "Tom dos vidros",
   
   "diff_desc": "Modelo de diferencial mecânico. O utilizador pode diminuir a velocidade de rotação num dos lados dos eixos de transmissão para ver as engrenagens planetárias a funcionar.",
   "btn_transparent": "Transparente",

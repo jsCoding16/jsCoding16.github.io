@@ -137,7 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		closeModal();
 		modal_sucesso.style.display = "block";
         overlay.style.display = "block";
-        
     });
 
     // 🟢 OPÇÃO 2: WhatsApp (Abre com texto pré-definido anónimo)
@@ -153,5 +152,43 @@ document.addEventListener("DOMContentLoaded", () => {
 		modal_sucesso.style.display = "block";
         overlay.style.display = "block";
     });
+    
+    
+    //FLOHO
+    if (document.getElementById("sel1")) {
+		const sel1 = document.getElementById("sel1");
+		const sel2 = document.getElementById("sel2");
+		const sel3 = document.getElementById("sel3");
+		const sel4 = document.getElementById("sel4");
+		const hull = document.getElementById("hull");
+		const deck = document.getElementById("deck");
+		const carpet = document.getElementById("carpet");
+		const glass = document.getElementById("glass");
+		sel1.addEventListener("click", () => {
+			hull.style.display = "block";
+			deck.style.display = "none";
+			carpet.style.display = "none";
+			glass.style.display = "none";
+		});
+		sel2.addEventListener("click", () => {
+			hull.style.display = "none";
+			deck.style.display = "block";
+			carpet.style.display = "none";
+			glass.style.display = "none";
+		});
+		sel3.addEventListener("click", () => {
+			hull.style.display = "none";
+			deck.style.display = "none";
+			carpet.style.display = "block";
+			glass.style.display = "none";
+		});
+		sel4.addEventListener("click", () => {
+			hull.style.display = "none";
+			deck.style.display = "none";
+			carpet.style.display = "none";
+			glass.style.display = "block";
+		});
+    };
+    
     
 });

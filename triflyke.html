@@ -36,6 +36,12 @@
 		.ibtn:active{background:rgba(220,220,0,0.5);color:#000;}
         @keyframes hideAnim {to{visibility:hidden;}}
         *, *::after, *::before {-webkit-user-select: none;-webkit-user-drag: none;-webkit-app-region: no-drag;}
+        @media (orientation: portrait) {
+			.seletordisplay:flex;justify-content:center;align-items:center;width:100%;position:absolute;bottom:60px;z-index:100;
+		}
+		@media (orientation: landscape) {
+		  .seletor {display:flex;justify-content:center;align-items:center;width:350px;position:absolute;bottom:60px;z-index:100;}
+		}
     </style>
     <script src="purecookie.js"></script>
     <script src="Jscripts.js"></script>
@@ -48,15 +54,15 @@
 </div>
 <div id="Container1"></div>
 
-<div style="display:flex;justify-content:center;align-items:center;width:100%;position:absolute;bottom:60px;z-index:100;">
+<div class="seletor">
 	<div class="menuBtn">
-		<p class="tit3" data-i18n="lbl_tri_color"></p>
+		<p class="tit2" data-i18n="lbl_tri_color"></p>
 		<img class="ibtn" id="cor1" src="imagens/cor1.png" alt=""/>
 		<img class="ibtn" id="cor2" src="imagens/cor2.png" alt=""/>
 		<img class="ibtn" id="cor3" src="imagens/cor3.png" alt=""/>
 		<img class="ibtn" id="cor4" src="imagens/cor4.png" alt=""/>
 		
-		<button id="orc" style="" data-i18n="btn_orc"></button>
+		<button id="orc" style="margin-bottom:5px;" data-i18n="btn_orc"></button>
 	</div>
 </div>
 

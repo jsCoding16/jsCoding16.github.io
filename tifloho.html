@@ -39,8 +39,13 @@
 			.buttonE {padding-top:2px;border:none;border-radius:8px;float:left;font-size:10px;color: #FFFF00;background: rgba(0,0,0,0.5);box-shadow: 0px 0px 12px rgba(220,220,0,0.5);text-align: center;text-decoration: none;cursor: pointer;width: 54px;height:20px;}
 			.buttonE:hover {background-color: rgba(0,0,0,1);box-shadow: 0px 0px 12px rgba(220,220,0,0.95);}
 			.buttonE:active {color: #000000;background-color: rgba(220,220,0,0.75);}
-			
-			
+			*, *::after, *::before {-webkit-user-select: none;-webkit-user-drag: none;-webkit-app-region: no-drag;}
+			@media (orientation: portrait) {
+				.seletor {align-items:center;width:100%;position:absolute;bottom:50px;z-index:100;}
+			}
+			@media (orientation: landscape) {
+			  .seletor {align-items:center;width:350px;position:absolute;bottom:50px;z-index:100;}
+			}
         </style>
         <script src="purecookie.js"></script>
 		<script src="Jscripts.js"></script>
@@ -62,40 +67,43 @@
             <button class="buttonD" id="Btn2" data-i18n="trifloho_lowerDeck"></button>
             <button class="buttonD" id="Btn3" data-i18n="trifloho_glassDoors"></button>
         </div>
-        <div style="display:flex;justify-content:center;align-items:center;width:100%;position:absolute;bottom:200px;z-index:100;">
-			<button class="ibtn" id="sel1" data-i18n="trifloho_sel1"></button>
-            <button class="ibtn" id="sel2" data-i18n="trifloho_sel2"></button>
-            <button class="ibtn" id="sel3" data-i18n="trifloho_sel3"></button> 
-            <button class="ibtn" id="sel4" data-i18n="trifloho_sel4"></button>
-		</div>
-        <div style="display:flex;justify-content:center;align-items:center;width:100%;position:absolute;bottom:60px;z-index:100;">
-			<div class="menuBtn">
-				<div id="hull">
-					<p class="tit2" data-i18n="trifloho_sel1"></p>
-					<img class="ibtn" id="hull1" src="imagens/hc1.png" alt=""/>
-					<img class="ibtn" id="hull2" src="imagens/hc2.png" alt=""/>
-					<img class="ibtn" id="hull3" src="imagens/hc3.png" alt=""/>
-					<img class="ibtn" id="hull4" src="imagens/hc4.png" alt=""/>
+        
+        <div class="seletor">
+			<div style="display:flex;justify-content:center;align-items:center;width:100%;">
+				<button class="ibtn" id="sel1" data-i18n="trifloho_sel1"></button>
+				<button class="ibtn" id="sel2" data-i18n="trifloho_sel2"></button>
+				<button class="ibtn" id="sel3" data-i18n="trifloho_sel3"></button> 
+				<button class="ibtn" id="sel4" data-i18n="trifloho_sel4"></button>
+			</div>
+			<div style="display:flex;justify-content:center;align-items:center;width:100%;">
+				<div class="menuBtn">
+					<div id="hull">
+						<p class="tit2" data-i18n="trifloho_sel1"></p>
+						<img class="ibtn" id="hull1" src="imagens/hc1.png" alt=""/>
+						<img class="ibtn" id="hull2" src="imagens/hc2.png" alt=""/>
+						<img class="ibtn" id="hull3" src="imagens/hc3.png" alt=""/>
+						<img class="ibtn" id="hull4" src="imagens/hc4.png" alt=""/>
+					</div>
+					<div id="deck" style="display: none;">
+						<p class="tit2" data-i18n="trifloho_sel2"></p>
+						<img class="ibtn" id="deck1" src="imagens/dt1.png" alt=""/>
+						<img class="ibtn" id="deck2" src="imagens/dt2.png" alt=""/>
+						<img class="ibtn" id="deck3" src="imagens/dt3.png" alt=""/>
+					</div>
+					<div id="carpet" style="display: none;">
+						<p class="tit2" data-i18n="trifloho_sel3"></p>
+						<img class="ibtn" id="wood1" src="imagens/wc1.png" alt=""/>
+						<img class="ibtn" id="wood2" src="imagens/wc2.png" alt=""/>
+						<img class="ibtn" id="wood3" src="imagens/wc3.png" alt=""/>
+						<img class="ibtn" id="wood4" src="imagens/wc4.png" alt=""/>
+					</div>
+					<div id="glass" style="display: none;">
+						<p class="tit2" data-i18n="trifloho_sel4"></p>
+						<img class="ibtn" id="glass1" src="imagens/gc1.png" alt=""/>
+						<img class="ibtn" id="glass2" src="imagens/gc2.png" alt=""/>
+					</div>
+					<button id="orc" style="margin-bottom:5px;" data-i18n="btn_orc"></button>
 				</div>
-				<div id="deck" style="display: none;">
-					<p class="tit2" data-i18n="trifloho_sel2"></p>
-					<img class="ibtn" id="deck1" src="imagens/dt1.png" alt=""/>
-					<img class="ibtn" id="deck2" src="imagens/dt2.png" alt=""/>
-					<img class="ibtn" id="deck3" src="imagens/dt3.png" alt=""/>
-				</div>
-				<div id="carpet" style="display: none;">
-					<p class="tit2" data-i18n="trifloho_sel3"></p>
-					<img class="ibtn" id="wood1" src="imagens/wc1.png" alt=""/>
-					<img class="ibtn" id="wood2" src="imagens/wc2.png" alt=""/>
-					<img class="ibtn" id="wood3" src="imagens/wc3.png" alt=""/>
-					<img class="ibtn" id="wood4" src="imagens/wc4.png" alt=""/>
-				</div>
-				<div id="glass" style="display: none;">
-					<p class="tit2" data-i18n="trifloho_sel4"></p>
-					<img class="ibtn" id="glass1" src="imagens/gc1.png" alt=""/>
-					<img class="ibtn" id="glass2" src="imagens/gc2.png" alt=""/>
-				</div>
-				<button id="orc" style="margin-bottom:5px;" data-i18n="btn_orc"></button>
 			</div>
 		</div>
 

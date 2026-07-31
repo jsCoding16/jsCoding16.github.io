@@ -60,6 +60,7 @@ Ni 1.000000
 d 1.000000
 illum 2
 map_Kd ../textu/piso.jpg
+norm ../textu/piso_norm.jpg
 
 newmtl chaowc
 Ns 96.078453
@@ -220,6 +221,7 @@ Ni 1.000000
 d 1.000000
 illum 2
 map_Kd ../textu/udeck.jpg
+norm ../textu/udeck_norm.jpg
 
 newmtl vidro
 Ns 94.117653

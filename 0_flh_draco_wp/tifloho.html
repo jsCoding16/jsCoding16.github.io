@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Floating house</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		
+        <style>
+            html, body {height: 100%;}
+            body {font-family: Arial;font-size:12px;background-color: #000;color: #fff;margin: 0px;overflow: hidden;}
+            #info {position: absolute;top: 10px;left: 20px;z-index: 100;display:block}
+            #info2 {color: #fff;position: absolute;top: 45%;width: 100%;text-align: center;z-index: 100;display:block;}
+            #pre {position: absolute; width: 600px; height: 360px; top:50%;left:50%;transform:translate(-50%,-50%);background-image: url('imagens/img7.jpg');background-repeat: no-repeat; z-index: 0;}
+            .central{position: absolute;width:100%;z-index: 97;top: 50px;animation: hideAnim 0s ease-in 2s; animation-fill-mode:forwards;}
+            @keyframes hideAnim {to{visibility:hidden;}}
+            #escrita {margin: auto;border-radius: 10px;padding: 15px 10px; background-color: rgba(0,0,0,0.25); max-width:350px;}
+            .btns {position: absolute;top: 20px;right: 20px;width: 70px;}
+            .bt {width: 70px;box-shadow: 0px 0px 12px rgba(0,0,0,0.5);cursor: pointer;z-index: 99;}
+        </style>
+	</head>
+	<body>
+
+		<div id="container"></div>
+        <div id="info">
+            <a href="index.html"><image src="imagens/voltar.png"></a>
+        </div>
+		<div id="info2" ></div>
+        <div class="central">
+            <p id="escrita">Explore this floating tiny house and see the fish through the lower deck bedroom window.</p>
+        </div>
+        <div class="btns">
+            <image class="bt" id="BtnF" src="textu/plantaO.png"/>
+            <image class="bt" id="Btn0" src="textu/plantaT.png"/>
+            <image class="bt" id="Btn1" src="textu/plantaM.png"/>
+            <image class="bt" id="Btn2" src="textu/plantaL.png"/>
+            <image class="bt" id="Btn3" src="textu/gdoors.png"/>
+        </div>
+		<script src="./dist/flh.js"></script>
+	</body>
+</html>
